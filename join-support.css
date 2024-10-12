@@ -1,0 +1,76 @@
+/* join-support.css */
+
+/* Import the main stylesheet */
+@import url('styles.css');
+
+/* Director's Welcome Section */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('path-to-your-header-image.jpeg') center/cover no-repeat;
+    opacity: 0.2;
+    z-index: 0;
+}
+.director-welcome {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.director-welcome img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.director-message {
+    flex: 1;
+}
+
+/* Join Us and Support Us Sections */
+.join-us, .support-us {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    margin-top: 1rem;
+}
+
+/* Team Members Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .director-welcome {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .director-welcome img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
